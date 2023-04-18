@@ -13,6 +13,11 @@ struct pos { ll x, y; };
 
 pos A[5000];
 
+/// <summary>
+/// Checking a polygon for convexity
+/// </summary>
+/// <param name="v"> pentagon</param>
+/// <returns>true, if the pentagon is convex, otherwise false</returns>
 bool test(std::vector<ll>& v) {
     ld sum = 0; // Sum of the interior angles
     for (int i = 1; i <= v.size(); i++) {
@@ -27,6 +32,12 @@ bool test(std::vector<ll>& v) {
     return std::abs(sum - 3 * pi) < 1e-8; // Interior angle sum needs to be 540 degrees
 }
 
+/// <summary>
+/// The law of large numbers.
+///  The probability that random points form a convex pentagon is high.
+///  Therefore, we will choose 5 random points and check them for convexity.
+/// </summary>
+/// <returns></returns>
 int main() {
     int N;
     std::cin >> N;

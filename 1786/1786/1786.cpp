@@ -5,6 +5,9 @@
 #include <string>
 #include <algorithm>
 
+/// <summary>
+/// Match the string step by step, look for the number of actions
+/// </summary>
 int main() {
     std::string str;
     std::cin >> str;
